@@ -1,0 +1,13 @@
+name: ChestReborn
+version: '1.0-SNAPSHOT'
+main: jp.houlab.Mochidsuki.chestReborn.Main
+api-version: '1.20'
+
+
+commands:
+  chestreborn:
+    aliases: []
+    description: BRC管理コマンド
+    permission: chestreborn.command.chestreborn
+    permission-message: Permission denied
+    usage: gr reload
