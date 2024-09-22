@@ -7,6 +7,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * コマンドリスナー
+ * @author Mochidsuki
+ */
 public class CommandListener implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
@@ -14,9 +18,7 @@ public class CommandListener implements CommandExecutor {
             if(strings.length == 1){
                 if(strings[0].equalsIgnoreCase("debug")){
                     Player player = (Player) commandSender;
-                    ChestControl.replace(player.getTargetBlockExact(10));
-                }
-                if(strings[0].equalsIgnoreCase("setloot")){
+                    ChestControl.replaceReturn(player.getTargetBlockExact(10));
                 }
             }
         }

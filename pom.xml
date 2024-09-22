@@ -20,7 +20,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/MochidsukiC/BattleRoyaleCore3.0</url>
+            <url>https://maven.pkg.github.com/MochidsukiC/ChestReborn</url>
         </repository>
     </distributionManagement>
 
