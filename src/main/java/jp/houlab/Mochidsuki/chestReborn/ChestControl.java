@@ -1,10 +1,7 @@
 package jp.houlab.Mochidsuki.chestReborn;
 
 import it.unimi.dsi.fastutil.Hash;
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.Particle;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.BlockState;
@@ -14,6 +11,7 @@ import org.bukkit.block.data.Directional;
 import org.bukkit.entity.Player;
 import org.bukkit.loot.LootTable;
 import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.util.Vector;
 
 import java.util.*;
 
@@ -56,7 +54,8 @@ public class ChestControl {
                             chest1.setBlockData(data1);
                             chest1.setLootTable(table);
                             chest1.update(true);
-                            loc.getWorld().spawnParticle(Particle.LAVA,loc,15);
+                            loc.getWorld().spawnParticle(Particle.LAVA,loc.add(new Vector(0.5,1,0.5)),15);
+                            loc.getWorld().playSound(loc, Sound.UI_STONECUTTER_TAKE_RESULT,2,1);
                         }
                     }.runTaskLater(plugin, 1);
                 }
