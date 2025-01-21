@@ -45,7 +45,7 @@ public class ChestControl {
             new BukkitRunnable() {
                 @Override
                 public void run() {
-                    LootTable lootTable = chests.get(block);
+
                     loc.getBlock().setType(Material.CHEST);
                     new BukkitRunnable() {
                         @Override
@@ -54,7 +54,7 @@ public class ChestControl {
                             BlockData data1 = chest1.getBlockData();
                             ((Directional) data1).setFacing(blockFace);
                             chest1.setBlockData(data1);
-                            chest1.setLootTable(lootTable);
+                            chest1.setLootTable(table);
                             chest1.update(true);
                             loc.getWorld().spawnParticle(Particle.LAVA,loc,15);
                         }
